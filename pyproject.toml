@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "timeplus-ocsf-simulator"
+version = "0.1.0"
+description = "A generator for simulated OCSF (Open Cybersecurity Schema Framework) event streams"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    { name = "Gang Tao", email = "gang@timeplus.com" },
+]
+keywords = ["ocsf", "cybersecurity", "event-simulation", "streaming"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Software Development :: Testing",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "faker>=20.0.0",
+]
+
+[project.optional-dependencies]
+ocsf = ["ocsf-lib>=0.10.3"]
+kafka = ["kafka-python>=2.0.0"]
+all = ["ocsf-lib>=0.10.3", "kafka-python>=2.0.0"]
+
+[project.scripts]
+ocsf-sim = "ocsf_simulator:main_cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ocsf_simulator = ["data/*.csv"]
