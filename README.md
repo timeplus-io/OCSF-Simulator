@@ -8,15 +8,23 @@ realistic synthetic data.
 ## Install
 
 ```bash
-pip install .
+pip install timeplus-ocsf-simulator
 ```
 
 Optional extras:
 
 ```bash
-pip install ".[ocsf]"    # use the real ocsf-lib schema
-pip install ".[kafka]"   # enable Kafka output
-pip install ".[all]"
+pip install "timeplus-ocsf-simulator[ocsf]"    # use the real ocsf-lib schema
+pip install "timeplus-ocsf-simulator[kafka]"   # enable Kafka output
+pip install "timeplus-ocsf-simulator[all]"
+```
+
+Or install from source:
+
+```bash
+git clone https://github.com/timeplus-io/OCSF-Simulator.git
+cd OCSF-Simulator
+pip install -e .
 ```
 
 ## Use as a CLI

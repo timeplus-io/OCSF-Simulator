@@ -28,6 +28,11 @@ ocsf = ["ocsf-lib>=0.10.3"]
 kafka = ["kafka-python>=2.0.0"]
 all = ["ocsf-lib>=0.10.3", "kafka-python>=2.0.0"]
 
+[project.urls]
+Homepage = "https://github.com/timeplus-io/OCSF-Simulator"
+Repository = "https://github.com/timeplus-io/OCSF-Simulator"
+Issues = "https://github.com/timeplus-io/OCSF-Simulator/issues"
+
 [project.scripts]
 ocsf-sim = "ocsf_simulator:main_cli"
 
